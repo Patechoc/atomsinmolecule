@@ -14,12 +14,11 @@ build:
     #     python_location: /usr/bin/python3.2
 
     - script:
-        name: installing dependencies
+        name: installing the package and its dependencies
         code: |
-          pip install -r requirements-dev.txt
-          echo "PyTest version $(py.test --version) running"
-          cd tests
-          python -m pytest
+          pip install --upgrade pip
+          pip install pytest
+          python setup.py install
 
     # A step that executes `pip install` command.
     - pip-install
@@ -43,9 +42,26 @@ build:
           echo "pip version $(pip --version) running"
 
     - script:
-        name: Testing
+        name: Python version
         code: |
-          pip install pytest
           echo "PyTest version $(py.test --version) running"
-          cd tests
-          python -m pytest
+
+    - script:
+        name: Check the package is importable and run the tests differently
+        code: |
+          pip install -e .
+
+    - script:
+        name: Tests in all below test directories
+        code: |
+          py.test atomsinmolecule
+
+    - script:
+        name: Inlined test dirs
+        code: |
+          py.test atomsinmolecule/tests/test_main.py
+
+    - script:
+        name: External test dirs
+        code: |
+          py.test tests/test_main.py
