@@ -23,6 +23,8 @@ python setup.py install
 pip install --upgrade pip
 pip install pytest
 ##pip install -m requirements-dev.txt
+...
+deactivate
 ```
 
 Make sure that "mypkg" is importable, for example by typing once:
