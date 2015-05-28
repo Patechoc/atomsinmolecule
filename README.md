@@ -1,4 +1,4 @@
-# atomsInMolecule (Python Module)
+# Atoms In Molecule (Python Module: atomsinmolecule)
 
 [![wercker status](https://app.wercker.com/status/ea298b1bcee181efc903b099bc37ad78/m "wercker status")](https://app.wercker.com/project/bykey/ea298b1bcee181efc903b099bc37ad78)
 

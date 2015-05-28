@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Module atomsInMolecule
+"""Module atomsinmolecule
 
 This module provides abstract entities to deal with atoms
 and molecules for treating results with various
@@ -7,7 +7,7 @@ computational chemistry software.
 """
 
 # The package name, which is also the "UNIX name" for the project.
-package = 'atomsInMolecule'
+package = 'atomsinmolecule'
 project = "Atoms in molecule"
 project_no_spaces = project.replace(' ', '')
 version = '0.1'
