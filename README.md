@@ -6,11 +6,30 @@ This module provides practical entities to deal with atoms and molecules when co
 
 
 ## Testing
-
 ```shell
 cd tests
 py.test -v
 ```
+
+## Good Practices
+
+Check those links:
+- https://pytest.org/latest/goodpractises.html
+- http://www.scotttorborg.com/python-packaging/minimal.html
+```shell
+virtualenv .   # create a virtualenv directory in the current directory
+source bin/activate
+python setup.py install
+pip install --upgrade pip
+pip install pytest
+##pip install -m requirements-dev.txt
+```
+
+Make sure that "mypkg" is importable, for example by typing once:
+```shell
+pip install -e .   # install package using setup.py in editable mode
+```
+
 
 ## License
 
