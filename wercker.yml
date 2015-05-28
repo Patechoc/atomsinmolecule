@@ -16,7 +16,7 @@ build:
     - script:
         name: installing dependencies
         code: |
-          apt-get install -y pandoc
+          sudo apt-get install -y pandoc
           pip install -r requirements-dev.txt
           echo "PyTest version $(py.test --version) running"
           cd tests
