@@ -60,8 +60,3 @@ build:
         name: Inlined test dirs
         code: |
           py.test atomsinmolecule/tests/test_main.py
-
-    - script:
-        name: External test dirs
-        code: |
-          py.test tests/test_main.py
