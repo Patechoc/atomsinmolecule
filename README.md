@@ -30,6 +30,14 @@ Make sure that "mypkg" is importable, for example by typing once:
 pip install -e .   # install package using setup.py in editable mode
 ```
 
+Typically you can run tests by pointing to test directories or modules:
+```shell
+py.test tests/test_main.py                  # for external test dirs
+py.test atomsinmolecule/tests/test_main.py  # for inlined test dirs
+py.test atomsinmolecule                     # run tests in all below test directories
+py.test                                     # run all tests below current dir
+...
+```
 
 ## License
 
