@@ -44,7 +44,7 @@ except ImportError:
 sys.path.append('.')
 
 ## Constants
-CODE_DIRECTORY = 'atomsinmolecule'
+CODE_DIRECTORY = 'atomsinmolecule/'
 TESTS_DIRECTORY = 'tests'
 
 # Import metadata. Normally this would just be:
