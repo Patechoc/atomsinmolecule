@@ -24,7 +24,6 @@ pip install --upgrade pip
 pip install pytest
 ##pip install -m requirements-dev.txt
 ...
-deactivate
 ```
 
 Make sure that "mypkg" is importable, for example by typing once:
@@ -39,6 +38,11 @@ py.test atomsinmolecule/tests/test_main.py  # for inlined test dirs
 py.test atomsinmolecule                     # run tests in all below test directories
 py.test                                     # run all tests below current dir
 ...
+```
+
+Don't forget to quit the virtual environment
+```shell
+deactivate
 ```
 
 ## License
