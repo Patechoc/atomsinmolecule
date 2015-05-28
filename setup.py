@@ -7,8 +7,8 @@ import imp
 import subprocess
 import convertREADME
 
-# ## creating a temporary reStructeredTxt version of README for setup.py to read in
-# description_rst = ''
+## creating a temporary reStructeredTxt version of README for setup.py to read in
+description_rst = ''
 # if os.path.isfile('README.md') and not (os.path.isfile('README.rst')):
 #     description_rst = convertREADME.convert_md2rst('README.md','README.rst')
 # elif os.path.isfile('README.rst') and not (os.path.isfile('README.md')):
@@ -242,7 +242,8 @@ setup_dict = dict(
     maintainer_email=metadata.emails[0],
     url=metadata.url,
     description=metadata.description,
-    long_description=description_rst, #read('README.rst'),
+#    long_description=description_rst, #read('README.rst'),
+    long_description=read('README.rst'),
     # Find a list of classifiers here:
     # <http://pypi.python.org/pypi?%3Aaction=list_classifiers>
     classifiers=[
