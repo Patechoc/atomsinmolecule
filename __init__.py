@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """abstract entities for dealing with atoms and molecules"""
 
-from atomsInMolecule import metadata
+import metadata
 
 
 __version__ = metadata.version

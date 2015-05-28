@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 
 """
-What it does from inputs
+This module contains practical
+abstract objects such as atom and molecule
+that are useful when dealing with various software
+in computational chemistry
 
 by: Patrick Merlot <patrick.merlot@gmail.com>
 project: https://github.com/
