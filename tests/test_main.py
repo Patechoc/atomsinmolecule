@@ -8,9 +8,9 @@ from pytest import raises
 import pytest
 parametrize = pytest.mark.parametrize
 
-from atomsInMolecule import metadata
-from atomsInMolecule.main import main
-
+import metadata
+from main import main
+#main = __import__('../main')
 
 class TestMain(object):
     @parametrize('helparg', ['-h', '--help'])
