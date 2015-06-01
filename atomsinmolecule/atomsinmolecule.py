@@ -155,9 +155,11 @@ class molecule(object):
         strMol =   "shortname: " + self.shortname +"\n"\
                    + "name:" + self.name +"\n" \
                    + "(" + str(self.nbAtomsInMolecule) + " atoms)\n"\
-                   + "molecular charge: " + str(self.charge)+"\n" \
-                   + "distances in: " + self.unitDistance+"\n" \
-                   + "comments: " + self.comments+"\n"
+                   + "molecular charge: " + str(self.charge)+"\n"
+        if self.unitDistance != None:
+            strMol += "distances in: " + self.unitDistance+"\n"
+        if self.comments != "":
+            strMol += "comments: " + str(self.comments)+"\n"
         strMol = strMol + "".join(['{0}\n'.format(atom.get_content_atomCoord()) for atom in self.listAtoms])
         return strMol
 
@@ -175,7 +177,7 @@ def main():
     atom = atomInfos(atomSymbol)
     print "Charge of "+ atomSymbol + " is: ",atom.atomCharge
     # create a molecule
-    myMolecule = molecule("Patrickyne", name="Patrickyne Merlotusine", comments="Highly toxic large protein", nbAtomsInMolecule=5000)
+    myMolecule = molecule("Patrickyne", name="Patrickyne Merlotusine", comments="Highly toxic large protein")
     print myMolecule
 
 
