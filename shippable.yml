@@ -3,4 +3,16 @@ language: python
 python:
   - 2.7
 
+build:
+  ci:
+    - "pip install pytest"
+    - "python setup.py install"
+    - "pip install -r requirements.txt"
 
+    #Create folders for test and code coverage
+    - mkdir -p shippable/testresults
+    - mkdir -p shippable/codecoverage
+
+    #Run test and code coverage and output results to the right folder
+    - py.test --junitxml=shippable/testresults/nosetests.xml
+    - py.test --cov=modules --cov-report=xml:shippable/codecoverage/coverage.xml
